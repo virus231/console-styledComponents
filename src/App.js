@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Flex } from './components/Flex';
+import { Title } from './components/Title'
+import { Console } from './components/Console'
+import { Button } from './components/Button'
+import {AppWrapper} from './styles/styles'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+      <Flex justify="center">
+        <Title>Console</Title>
+      </Flex>
+      <Flex direction="column" margin="10px 0">
+        <Console/>
+        <Button outlined color="green" align="flex-end">Отправить</Button>
+      </Flex>
+    </AppWrapper>
   );
 }
 
